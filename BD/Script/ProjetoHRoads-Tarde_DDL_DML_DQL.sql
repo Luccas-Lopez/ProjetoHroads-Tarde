@@ -85,7 +85,7 @@ INSERT personagem (idClasse, nomePersonagem,capacidadeVida,capacidadeMana,dataAt
 VALUES (1,'DeuBug','100','80',GETDATE(),'18/01/2019'), (4,'BitBug','70','100',GETDATE(),'17/03/2016'), (7,'Fer8','75','60',GETDATE(),'18/03/2018');
 GO
 
-INSERT tipoUsuario (tipoUsuario)
+INSERT tipoUsuario (nomeTipoUsuario)
 VALUES ('ADM'),('JOGADOR');
 GO
 

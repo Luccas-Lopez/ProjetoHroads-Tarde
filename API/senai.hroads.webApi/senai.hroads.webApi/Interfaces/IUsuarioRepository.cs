@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace senai.hroads.webApi_.Interfaces
 {
-    interface ITipoUsuario
+    interface IUsuarioRepository
     {
-        List<TipoUsuario> ListarTodos();
+        List<Usuario> ListarTodos();
         void Cadastrar();
 
         void BuscarPorId();

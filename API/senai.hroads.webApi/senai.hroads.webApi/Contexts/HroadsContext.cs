@@ -25,13 +25,14 @@ namespace senai.hroads.webApi_.Contexts
         public virtual DbSet<TipoHabilidade> TipoHabilidades { get; set; }
         public virtual DbSet<TipoUsuario> TipoUsuarios { get; set; }
         public virtual DbSet<Usuario> Usuarios { get; set; }
+        public object Classe { get; internal set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Data Source=NOTE0113D1\\SQLEXPRESS; initial catalog=SENAI_HROADS_TARDE; user Id=sa; pwd=Senai@132;");
+                optionsBuilder.UseSqlServer("Data Source=DESKTOP-OAGJCNA\\SQLEXPRESSS; initial catalog=SENAI_HROADS_TARDE; user Id=SA; pwd=SENAI@132;");
             }
         }
 
@@ -178,7 +179,7 @@ namespace senai.hroads.webApi_.Contexts
 
                 entity.Property(e => e.IdTipoUsuario).HasColumnName("idTipoUsuario");
 
-                entity.Property(e => e.TipoUsuario1)
+                entity.Property(e => e.nomeTipoUsuario)
                     .IsRequired()
                     .HasMaxLength(20)
                     .IsUnicode(false)

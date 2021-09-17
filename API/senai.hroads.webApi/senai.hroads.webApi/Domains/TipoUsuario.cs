@@ -13,7 +13,7 @@ namespace senai.hroads.webApi_.Domains
         }
 
         public short IdTipoUsuario { get; set; }
-        public string TipoUsuario1 { get; set; }
+        public string nomeTipoUsuario { get; set; }
 
         public virtual ICollection<Usuario> Usuarios { get; set; }
     }

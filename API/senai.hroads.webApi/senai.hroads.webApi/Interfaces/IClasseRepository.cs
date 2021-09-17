@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace senai.hroads.webApi_.Interfaces
 {
-    interface IClasse
+    interface IClasseRepository
     {
         List<Classe> ListarTodos();
-        void Cadastrar();
+        void Cadastrar(Classe novaClassse);
 
-        void BuscarPorId();
+        Classe BuscarPorId(int IdClasse);
 
-        void AtualizarIdCorpo();
+        void AtualizarIdCorpo(int IdClasse, Classe classeAtualizada);
 
-        void Deletar();
+        void Deletar(int IdClasse);
     }
 }
