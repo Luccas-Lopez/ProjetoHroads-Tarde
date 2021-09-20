@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\55119\\Desktop\\ProjetoHroads-Tarde\\API\\senai.hroads.webApi\\senai.hroads.webApi\\senai.hroads.webApi..csproj": {}
+    "C:\\Users\\Patricia\\Desktop\\ProjetoHroads-Tarde\\API\\senai.hroads.webApi\\senai.hroads.webApi\\senai.hroads.webApi..csproj": {}
   },
   "projects": {
-    "C:\\Users\\55119\\Desktop\\ProjetoHroads-Tarde\\API\\senai.hroads.webApi\\senai.hroads.webApi\\senai.hroads.webApi..csproj": {
+    "C:\\Users\\Patricia\\Desktop\\ProjetoHroads-Tarde\\API\\senai.hroads.webApi\\senai.hroads.webApi\\senai.hroads.webApi..csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\55119\\Desktop\\ProjetoHroads-Tarde\\API\\senai.hroads.webApi\\senai.hroads.webApi\\senai.hroads.webApi..csproj",
+        "projectUniqueName": "C:\\Users\\Patricia\\Desktop\\ProjetoHroads-Tarde\\API\\senai.hroads.webApi\\senai.hroads.webApi\\senai.hroads.webApi..csproj",
         "projectName": "senai.hroads.webApi.",
-        "projectPath": "C:\\Users\\55119\\Desktop\\ProjetoHroads-Tarde\\API\\senai.hroads.webApi\\senai.hroads.webApi\\senai.hroads.webApi..csproj",
-        "packagesPath": "C:\\Users\\55119\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\55119\\Desktop\\ProjetoHroads-Tarde\\API\\senai.hroads.webApi\\senai.hroads.webApi\\obj\\",
+        "projectPath": "C:\\Users\\Patricia\\Desktop\\ProjetoHroads-Tarde\\API\\senai.hroads.webApi\\senai.hroads.webApi\\senai.hroads.webApi..csproj",
+        "packagesPath": "C:\\Users\\Patricia\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Patricia\\Desktop\\ProjetoHroads-Tarde\\API\\senai.hroads.webApi\\senai.hroads.webApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\55119\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Patricia\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -69,6 +69,18 @@
               "version": "[5.0.10, )"
             },
             "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.2.1, )"
+            },
+            "Swashbuckle.AspNetCore.Swagger": {
+              "target": "Package",
+              "version": "[6.2.1, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerGen": {
+              "target": "Package",
+              "version": "[6.2.1, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerUI": {
               "target": "Package",
               "version": "[6.2.1, )"
             },

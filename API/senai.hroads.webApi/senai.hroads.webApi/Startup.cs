@@ -28,8 +28,9 @@ namespace senai.hroads.webApi_
                     options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
                     options.SerializerSettings.NullValueHandling = NullValueHandling.Ignore;
                     options.SerializerSettings.NullValueHandling = NullValueHandling.Ignore;
+                });
 
-                    services.AddSwaggerGen(c =>
+            services.AddSwaggerGen(c =>
                     {
                         c.SwaggerDoc("v1", new OpenApiInfo { Title = "HRoads.webAPI", Version = "v1" });
 
@@ -39,26 +40,25 @@ namespace senai.hroads.webApi_
                         c.IncludeXmlComments(xmlPath);
                     });
 
-                    services
-                        .AddAuthentication(options =>
-                        {
-                            options.DefaultAuthenticateScheme = "JwtBearer";
-                            options.DefaultChallengeScheme = "JwtBearer";
-                        })
+            services
+                .AddAuthentication(options =>
+                {
+                    options.DefaultAuthenticateScheme = "JwtBearer";
+                    options.DefaultChallengeScheme = "JwtBearer";
+                })
 
-                        .AddJwtBearer("JwtBearer", options =>
-                        {
-                            options.TokenValidationParameters = new TokenValidationParameters
-                            {
-                                ValidateIssuer = true,
-                                ValidateAudience = true,
-                                ValidateLifetime = true,
-                                IssuerSigningKey = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes("hroads-chave-autenticacao")),
-                                ClockSkew = TimeSpan.FromMinutes(30),
-                                ValidIssuer = "hrooads.webAPI",
-                                ValidAudience = "hroads.webAPI"
-                            };
-                        });
+                .AddJwtBearer("JwtBearer", options =>
+                {
+                    options.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        ValidateIssuer = true,
+                        ValidateAudience = true,
+                        ValidateLifetime = true,
+                        IssuerSigningKey = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes("hroads-chave-autenticacao")),
+                        ClockSkew = TimeSpan.FromMinutes(30),
+                        ValidIssuer = "hroads.webAPI",
+                        ValidAudience = "hroads.webAPI"
+                    };
                 });
         }
 
@@ -72,8 +72,9 @@ namespace senai.hroads.webApi_
 
             app.UseSwagger();
 
-            app.UseSwaggerUI(c => {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "hroads.webAPI");
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "senai.hroads.webApi");
                 c.RoutePrefix = string.Empty;
             });
 

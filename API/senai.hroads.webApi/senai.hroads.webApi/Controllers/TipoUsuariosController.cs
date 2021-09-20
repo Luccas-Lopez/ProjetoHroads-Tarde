@@ -8,10 +8,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace senai.hroads.webApi_.Controllers
+namespace senai.hroads.webApi_Controllers
 {
-    public class TipoUsuariosController : Controller
-    {
         [Route("api/[controller]")]
         [ApiController]
         public class TiposUsuariosController : ControllerBase
@@ -63,4 +61,3 @@ namespace senai.hroads.webApi_.Controllers
             }
         }
     }
-}
