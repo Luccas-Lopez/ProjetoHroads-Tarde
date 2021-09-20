@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace senai.hroads.webApi_.Repositories
 {
-    public class TipoHabillidadeRepository : ITipoHabilidadeRepository
+    public class TipoHabilidadeRepository : ITipoHabilidadeRepository
     {
         HroadsContext ctx = new HroadsContext();
         public void AtualizarIdCorpo(int IdTipoHabilidade, TipoHabilidade tipoHabilidadeAtualizado)
