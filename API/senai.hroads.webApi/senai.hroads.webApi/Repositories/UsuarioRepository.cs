@@ -1,4 +1,7 @@
-﻿using senai.hroads.webApi_.Interfaces;
+﻿using Microsoft.EntityFrameworkCore;
+using senai.hroads.webApi_.Contexts;
+using senai.hroads.webApi_.Domains;
+using senai.hroads.webApi_.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,29 +11,52 @@ namespace senai.hroads.webApi_.Repositories
 {
     public class UsuarioRepository : IUsuarioRepository
     {
-        public void AtualizarIdCorpo()
+        HroadsContext ctx = new HroadsContext();
+        public void AtualizarIdCorpo(int IdUsuario, Usuario UsuarioAtualizado)
         {
-            throw new NotImplementedException();
+            Usuario usuarioBuscado = BuscarPorId(IdUsuario);
+
+            if (UsuarioAtualizado.NomeUsuario != null)
+            {
+                usuarioBuscado.NomeUsuario = UsuarioAtualizado.NomeUsuario;
+            }
+
+            ctx.Usuarios.Update(usuarioBuscado);
+
+            ctx.SaveChanges();
         }
 
-        public void BuscarPorId()
+        public Usuario BuscarPorId(int IdUsuario)
         {
-            throw new NotImplementedException();
+            return ctx.Usuarios.FirstOrDefault(e => e.IdUsuario == IdUsuario);
         }
 
-        public void Cadastrar()
+        public void Cadastrar(Usuario novoUsuario)
         {
-            throw new NotImplementedException();
+            ctx.Usuarios.Add(novoUsuario);
+            ctx.SaveChanges();
         }
 
-        public void Deletar()
+        public void Deletar(int IdUsuario)
         {
-            throw new NotImplementedException();
+            Usuario usuarioBuscado = BuscarPorId(IdUsuario);
+            ctx.Usuarios.Remove(usuarioBuscado);
+            ctx.SaveChanges();
         }
 
-        public List<Domains.Usuario> ListarTodos()
+        public List<Usuario> ListarComTipo()
         {
-            throw new NotImplementedException();
+            return ctx.Usuarios.Include(u => u.IdTipoUsuarioNavigation).ToList();
+        }
+
+        public List<Usuario> ListarTodos()
+        {
+            return ctx.Usuarios.ToList();
+        }
+
+        public Usuario Login(string senha, string email)
+        {
+            return ctx.Usuarios.FirstOrDefault(u => u.Senha == senha || u.Email == email);
         }
     }
 }

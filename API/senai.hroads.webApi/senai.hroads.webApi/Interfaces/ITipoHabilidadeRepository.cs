@@ -16,5 +16,7 @@ namespace senai.hroads.webApi_.Interfaces
         void AtualizarIdCorpo(int IdTipoHabilidade, TipoHabilidade TipoHabilidadeAtualizado);
 
         void Deletar(int IdTipoHabilidade);
+
+
     }
 }

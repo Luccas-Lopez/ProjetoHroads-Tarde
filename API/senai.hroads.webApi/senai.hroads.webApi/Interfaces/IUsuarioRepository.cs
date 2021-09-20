@@ -9,12 +9,16 @@ namespace senai.hroads.webApi_.Interfaces
     interface IUsuarioRepository
     {
         List<Usuario> ListarTodos();
-        void Cadastrar();
+        void Cadastrar(Usuario novoUsuario);
 
-        void BuscarPorId();
+        public Usuario BuscarPorId(int IdUsuario);
 
-        void AtualizarIdCorpo();
+        void AtualizarIdCorpo(int IdUsuario, Usuario UsuarioAtualizado);
 
-        void Deletar();
+        void Deletar(int IdUsuario);
+
+        Usuario Login(string senha, string email);
+
+        List<Usuario> ListarComTipo();
     }
 }

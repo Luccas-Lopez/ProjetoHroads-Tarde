@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Patricia\\Desktop\\Hroads\\ProjetoHroads-Tarde\\API\\senai.hroads.webApi\\senai.hroads.webApi\\senai.hroads.webApi..csproj": {}
+    "C:\\Users\\Patricia\\Desktop\\ProjetoHroads-Tarde\\API\\senai.hroads.webApi\\senai.hroads.webApi\\senai.hroads.webApi..csproj": {}
   },
   "projects": {
-    "C:\\Users\\Patricia\\Desktop\\Hroads\\ProjetoHroads-Tarde\\API\\senai.hroads.webApi\\senai.hroads.webApi\\senai.hroads.webApi..csproj": {
+    "C:\\Users\\Patricia\\Desktop\\ProjetoHroads-Tarde\\API\\senai.hroads.webApi\\senai.hroads.webApi\\senai.hroads.webApi..csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Patricia\\Desktop\\Hroads\\ProjetoHroads-Tarde\\API\\senai.hroads.webApi\\senai.hroads.webApi\\senai.hroads.webApi..csproj",
+        "projectUniqueName": "C:\\Users\\Patricia\\Desktop\\ProjetoHroads-Tarde\\API\\senai.hroads.webApi\\senai.hroads.webApi\\senai.hroads.webApi..csproj",
         "projectName": "senai.hroads.webApi.",
-        "projectPath": "C:\\Users\\Patricia\\Desktop\\Hroads\\ProjetoHroads-Tarde\\API\\senai.hroads.webApi\\senai.hroads.webApi\\senai.hroads.webApi..csproj",
+        "projectPath": "C:\\Users\\Patricia\\Desktop\\ProjetoHroads-Tarde\\API\\senai.hroads.webApi\\senai.hroads.webApi\\senai.hroads.webApi..csproj",
         "packagesPath": "C:\\Users\\Patricia\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Patricia\\Desktop\\Hroads\\ProjetoHroads-Tarde\\API\\senai.hroads.webApi\\senai.hroads.webApi\\obj\\",
+        "outputPath": "C:\\Users\\Patricia\\Desktop\\ProjetoHroads-Tarde\\API\\senai.hroads.webApi\\senai.hroads.webApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Patricia\\AppData\\Roaming\\NuGet\\NuGet.Config",

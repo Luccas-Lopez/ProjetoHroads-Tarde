@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kIiitU5OZV1o9fRq3oQtsqEje5RcE5EMB1xC/5mkvyB1Cd9HrJ2diaYiumdiAClkR5nxUdIt5iwydSiu+mQpnA==",
+  "dgSpecHash": "T2eJXdXtg5Y1HhFYViAdUXIsaY2NJr/wg7V3d/Dzy8XWo4RnV53wJCkfwpKrxUxYofWSdLFSEhHmyr7Y3iJSig==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Patricia\\Desktop\\Hroads\\ProjetoHroads-Tarde\\API\\senai.hroads.webApi\\senai.hroads.webApi\\senai.hroads.webApi..csproj",
+  "projectFilePath": "C:\\Users\\Patricia\\Desktop\\ProjetoHroads-Tarde\\API\\senai.hroads.webApi\\senai.hroads.webApi\\senai.hroads.webApi..csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Patricia\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Patricia\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

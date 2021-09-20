@@ -1,4 +1,5 @@
-﻿using senai.hroads.webApi_.Contexts;
+﻿using Microsoft.EntityFrameworkCore;
+using senai.hroads.webApi_.Contexts;
 using senai.hroads.webApi_.Domains;
 using senai.hroads.webApi_.Interfaces;
 using System;
@@ -46,6 +47,11 @@ namespace senai.hroads.webApi_.Repositories
         public List<Habilidade> ListarTodos()
         {
             return ctx.Habilidades.ToList();  
+        }
+
+        public List<Habilidade> ListarComTipo()
+        {
+            return ctx.Habilidades.Include(h => h.IdTipoHabilidadeNavigation).ToList();
         }
     }
 }

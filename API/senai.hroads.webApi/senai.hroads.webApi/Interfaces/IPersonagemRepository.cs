@@ -16,5 +16,7 @@ namespace senai.hroads.webApi_.Interfaces
         void AtualizarIdCorpo(int IdPersonagem, Personagem personagemAtualizado);
 
         void Deletar(int IdPersonagem);
+
+        List<Personagem> ListarComClasse();
     }
 }
