@@ -14,12 +14,10 @@ GO
 
 CREATE TABLE tipoUsuario(
 idTipoUsuario SMALLINT PRIMARY KEY IDENTITY (1,1),
-tipoUsuario VARCHAR (20) NOT NULL
+nomeTipoUsuario VARCHAR (20) NOT NULL
 ); 
 GO
 
-drop table tipoUsuario
-drop table usuario
 
 CREATE TABLE usuario(
 idUsuario SMALLINT PRIMARY KEY IDENTITY (1,1),
@@ -29,7 +27,6 @@ senha VARCHAR (100),
 idTipoUsuario SMALLINT FOREIGN KEY REFERENCES tipoUsuario(idTipoUsuario)
 );
 GO
-
 
 CREATE TABLE tipoHabilidade(
 idTipoHabilidade TINYINT PRIMARY KEY IDENTITY (1,1),
@@ -110,6 +107,7 @@ SELECT * FROM personagem
 
 SELECT * FROM tipoUsuario
 SELECT * FROM usuario
+WHERE email = 'saulo@email.com' AND senha = 'saulo123'
 
 --Selecionar somente o nome das classes;
 SELECT nomeClasse AS Classe FROM CLASSE;

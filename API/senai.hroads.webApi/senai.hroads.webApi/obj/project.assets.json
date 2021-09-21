@@ -5707,19 +5707,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Patricia\\.nuget\\packages\\": {}
+    "C:\\Users\\DEV\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Patricia\\Desktop\\ProjetoHroads-Tarde\\API\\senai.hroads.webApi\\senai.hroads.webApi\\senai.hroads.webApi..csproj",
+      "projectUniqueName": "C:\\Users\\DEV\\Desktop\\ProjetoHroads-Tarde\\API\\senai.hroads.webApi\\senai.hroads.webApi\\senai.hroads.webApi..csproj",
       "projectName": "senai.hroads.webApi.",
-      "projectPath": "C:\\Users\\Patricia\\Desktop\\ProjetoHroads-Tarde\\API\\senai.hroads.webApi\\senai.hroads.webApi\\senai.hroads.webApi..csproj",
-      "packagesPath": "C:\\Users\\Patricia\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Patricia\\Desktop\\ProjetoHroads-Tarde\\API\\senai.hroads.webApi\\senai.hroads.webApi\\obj\\",
+      "projectPath": "C:\\Users\\DEV\\Desktop\\ProjetoHroads-Tarde\\API\\senai.hroads.webApi\\senai.hroads.webApi\\senai.hroads.webApi..csproj",
+      "packagesPath": "C:\\Users\\DEV\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\DEV\\Desktop\\ProjetoHroads-Tarde\\API\\senai.hroads.webApi\\senai.hroads.webApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Patricia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\DEV\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
