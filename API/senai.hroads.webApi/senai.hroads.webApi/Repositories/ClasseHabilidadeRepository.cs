@@ -12,7 +12,7 @@ namespace senai.hroads.webApi_.Repositories
     public class ClasseHabilidadeRepository : IClasseHabilidadeRepository
     {
         HroadsContext ctx = new HroadsContext();
-        public void AtualizarIdCorpo(short id, ClasseHabilidade classeHabilidadeAtualizada)
+        public void AtualizarIdUrl(short id, ClasseHabilidade classeHabilidadeAtualizada)
         {
             ClasseHabilidade classeHabilidadeBuscada = ctx.ClasseHabilidades.Find(id);
 

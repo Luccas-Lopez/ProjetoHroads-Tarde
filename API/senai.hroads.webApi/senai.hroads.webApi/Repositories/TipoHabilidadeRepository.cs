@@ -11,9 +11,9 @@ namespace senai.hroads.webApi_.Repositories
     public class TipoHabilidadeRepository : ITipoHabilidadeRepository
     {
         HroadsContext ctx = new HroadsContext();
-        public void AtualizarIdCorpo(int IdTipoHabilidade, TipoHabilidade tipoHabilidadeAtualizado)
+        public void AtualizarIdUrl(int IdTipoHabilidade, TipoHabilidade tipoHabilidadeAtualizado)
         {
-            TipoHabilidade tipoHabilidadeBuscado = BuscarPorId(IdTipoHabilidade);
+            TipoHabilidade tipoHabilidadeBuscado = ctx.TipoHabilidades.FirstOrDefault(th => th.IdTipoHabilidade == IdTipoHabilidade);
 
             if (tipoHabilidadeAtualizado.NomeTipoHabilidade != null)
             {

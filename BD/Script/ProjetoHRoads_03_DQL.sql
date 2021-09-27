@@ -3,15 +3,19 @@ GO
 ------------------------------------------------------------DQL----------------------------------------------------------------
 
 --Selecionar todos as classes;
-SELECT * FROM CLASSE
+SELECT * FROM classe
 --Selecionar todos os tipos de habilidades;
-SELECT * FROM TIPO_HABILIDADE
+SELECT * FROM tipoHabilidade
 --Selecionar todas as habilidades;
-SELECT * FROM HABILIDADE
-SELECT * FROM CLASSE_HABILIDADE
+SELECT * FROM habilidade
+SELECT * FROM classeHabilidade
 --Selecionar todos os personagens;
-SELECT * FROM PERSONAGEM
-
+SELECT * FROM personagem
+--Selecionar todos os tipos de usuários;
+SELECT * FROM tipoUsuario
+--Selecionar todos os usuários;
+SELECT * FROM usuario
+WHERE email = 'saulo@email.com' AND senha = 'saulo123'
 
 --Selecionar somente o nome das classes;
 SELECT nomeClasse AS Classe FROM CLASSE;
@@ -27,14 +31,14 @@ FROM  HABILIDADE
 ORDER BY  idHabilidade ASC
 
 --Selecionar todas as habilidades e a quais tipos de habilidades elas fazem parte;
-SELECT nomeHabilidade AS 'Habilidade', nomeTipoHabilidade AS 'Tipo da habilidade' FROM HABILIDADE
-INNER JOIN TIPO_HABILIDADE
-ON TIPO_HABILIDADE.idTipoHabilidade = HABILIDADE.idTipoHabilidade
+SELECT nomeHabilidade AS 'Habilidade', nomeTipoHabilidade AS 'Tipo da habilidade' FROM habilidade
+INNER JOIN tipoHabilidade
+ON tipoHabilidade.idTipoHabilidade = habilidade.idTipoHabilidade
 
 --Selecionar todos os personagens e suas respectivas classes;
-SELECT nomePersonagem AS 'Personagem',nomeClasse as 'Classe' FROM PERSONAGEM
+SELECT nomePersonagem AS 'Personagem',nomeClasse as 'Classe' FROM personagem
 INNER JOIN CLASSE
-ON CLASSE.idClasse = PERSONAGEM.idClasse
+ON classe.idClasse = personagem.idClasse
 
 --Selecionar todos os personagens e as classes (mesmo que elas não tenham correspondência em personagens);
 SELECT nomePersonagem AS 'Personagem',nomeClasse AS 'Classe' FROM PERSONAGEM
@@ -43,24 +47,26 @@ ON CLASSE.idClasse = PERSONAGEM.idClasse
 
 --Selecionar todas as classes e suas respectivas habilidades;
 SELECT nomeClasse AS Classe, nomeHabilidade AS Habilidade FROM CLASSE
-INNER JOIN CLASSE_HABILIDADE
-ON CLASSE.idClasse  = CLASSE_HABILIDADE.idClasse
+INNER JOIN classeHabilidade
+ON CLASSE.idClasse  = classeHabilidade.idClasse
 INNER JOIN HABILIDADE
-ON HABILIDADE.idHabilidade = CLASSE_HABILIDADE.idHabilidade;
+ON HABILIDADE.idHabilidade = classeHabilidade.idHabilidade;
 GO
 
 --Selecionar todas as habilidades e suas classes (somente as que possuem correspondência);
 SELECT nomeClasse AS Classe, nomeHabilidade AS Habilidade FROM CLASSE
-RIGHT JOIN CLASSE_HABILIDADE
-ON classe.idClasse  = CLASSE_HABILIDADE.idClasse
+RIGHT JOIN classeHabilidade
+ON classe.idClasse  = classeHabilidade.idClasse
 RIGHT JOIN HABILIDADE
-ON HABILIDADE.idHabilidade = CLASSE_HABILIDADE.idHabilidade;
+ON HABILIDADE.idHabilidade = classeHabilidade.idHabilidade;
 GO
 
 --Selecionar todas as habilidades e suas classes (mesmo que elas não tenham correspondência).
-SELECT nomeClasse AS Classe, nomeHabilidade AS Habilidade FROM CLASSE_HABILIDADE
+SELECT nomeClasse AS Classe, nomeHabilidade AS Habilidade FROM classeHabilidade
 LEFT JOIN CLASSE
-ON CLASSE.idClasse  = CLASSE_HABILIDADE.idClasse
+ON CLASSE.idClasse  = classeHabilidade.idClasse
 LEFT JOIN HABILIDADE
-ON HABILIDADE.idHabilidade = CLASSE_HABILIDADE.idHabilidade;
+ON HABILIDADE.idHabilidade = classeHabilidade.idHabilidade;
 GO
+
+

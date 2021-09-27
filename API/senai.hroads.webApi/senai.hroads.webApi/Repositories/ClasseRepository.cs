@@ -11,9 +11,9 @@ namespace senai.hroads.webApi_.Repositories
     public class ClasseRepository : IClasseRepository
     {
         HroadsContext ctx = new HroadsContext();
-        public void AtualizarIdCorpo(int IdClasse, Classe classeAtualizada)
+        public void AtualizarIdUrl(int IdClasse, Classe classeAtualizada)
         {
-            Classe classeBuscada = BuscarPorId(IdClasse);
+            Classe classeBuscada = ctx.Classes.FirstOrDefault(c => c.IdClasse == IdClasse);
 
             if (classeAtualizada.NomeClasse != null)
             {

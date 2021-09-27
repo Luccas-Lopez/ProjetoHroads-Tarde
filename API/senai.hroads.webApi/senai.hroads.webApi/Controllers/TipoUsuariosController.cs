@@ -12,11 +12,11 @@ namespace senai.hroads.webApi_Controllers
 {
         [Route("api/[controller]")]
         [ApiController]
-        public class TiposUsuariosController : ControllerBase
+        public class TipoUsuariosController : ControllerBase
         {
             private ITipoUsuarioRepository _tipousuarioRepository { get; set; }
 
-            public TiposUsuariosController()
+            public TipoUsuariosController()
             {
                 _tipousuarioRepository = new TipoUsuarioRespoitory();
             }
@@ -43,9 +43,9 @@ namespace senai.hroads.webApi_Controllers
             }
 
             [HttpPut]
-            public IActionResult AtualizarIdCopo(TipoUsuario tipousuarioAtualizado)
+            public IActionResult AtualizarIdUrl(int idTipoUsuario, TipoUsuario tipousuarioAtualizado)
             {
-                _tipousuarioRepository.AtualizarIdCorpo(tipousuarioAtualizado.IdTipoUsuario, tipousuarioAtualizado);
+                _tipousuarioRepository.AtualizarIdUrl(idTipoUsuario, tipousuarioAtualizado);
 
                 return StatusCode(204);
 

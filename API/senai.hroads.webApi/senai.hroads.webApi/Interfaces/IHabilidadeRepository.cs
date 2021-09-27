@@ -13,7 +13,7 @@ namespace senai.hroads.webApi_.Interfaces
 
         Habilidade BuscarPorId(int IdHabilidade);
 
-        void AtualizarIdCorpo(int IdHabilidade, Habilidade habilidadeAtualizada);
+        void AtualizarIdUrl(int IdHabilidade, Habilidade habilidadeAtualizada);
 
         void Deletar(int IdHabilidade);
 

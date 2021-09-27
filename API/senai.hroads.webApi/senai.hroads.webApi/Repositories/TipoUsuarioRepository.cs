@@ -12,9 +12,10 @@ namespace senai.hroads.webApi_.Repositories
     {
         HroadsContext ctx = new HroadsContext();
 
-        public void AtualizarIdCorpo(int IdTipoUsuario, TipoUsuario TipoUsuarioAtualizado)
+        public void AtualizarIdUrl(int IdTipoUsuario, TipoUsuario TipoUsuarioAtualizado)
         {
-            TipoUsuario tipoUsuarioBuscado = BuscarPorId(IdTipoUsuario);
+            TipoUsuario tipoUsuarioBuscado = ctx.TipoUsuarios.FirstOrDefault(tu => tu.IdTipoUsuario == IdTipoUsuario);
+
 
             if (TipoUsuarioAtualizado.nomeTipoUsuario != null)
             {

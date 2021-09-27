@@ -13,7 +13,7 @@ namespace senai.hroads.webApi_.Interfaces
 
         Classe BuscarPorId(int IdClasse);
 
-        void AtualizarIdCorpo(int IdClasse, Classe classeAtualizada);
+        void AtualizarIdUrl(int IdClasse, Classe classeAtualizada);
 
         void Deletar(int IdClasse);
     }

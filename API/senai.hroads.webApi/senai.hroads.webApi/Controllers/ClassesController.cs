@@ -44,9 +44,9 @@ namespace senai.hroads.webApi_.Controllers
         }
 
         [HttpPut]
-        public IActionResult AtualizarIdCorpo(Classe classeAtualizado)
+        public IActionResult AtualizarIdUrl(int idClasse, Classe classeAtualizado)
         {
-            _classeRepository.AtualizarIdCorpo(classeAtualizado.IdClasse, classeAtualizado);
+            _classeRepository.AtualizarIdUrl(idClasse, classeAtualizado);
 
             return StatusCode(204);
 

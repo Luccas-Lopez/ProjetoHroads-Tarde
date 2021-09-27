@@ -42,13 +42,17 @@ idTipoHabilidade TINYINT FOREIGN KEY REFERENCES tipoHabilidade (idTipoHabilidade
 GO
  
 CREATE TABLE classeHabilidade(
+idClasseHabilidade TINYINT PRIMARY KEY IDENTITY (1,1),
 idHabilidade TINYINT FOREIGN KEY REFERENCES habilidade (idHabilidade),
 idClasse TINYINT FOREIGN KEY REFERENCES classe (idClasse)
 );
 GO
 
+drop table classeHabilidade
+drop table personagem
+
 CREATE TABLE personagem(
-nomePersonagem VARCHAR (6) UNIQUE NOT NULL,
+nomePersonagem VARCHAR (256) UNIQUE NOT NULL,
 idPersonagem  TINYINT PRIMARY KEY IDENTITY (1,1),
 idClasse TINYINT FOREIGN KEY REFERENCES classe (idClasse),
 capacidadeVida INT,
@@ -104,8 +108,9 @@ SELECT * FROM habilidade
 SELECT * FROM classeHabilidade
 --Selecionar todos os personagens;
 SELECT * FROM personagem
-
+--Selecionar todos os tipos de usuários;
 SELECT * FROM tipoUsuario
+--Selecionar todos os usuários;
 SELECT * FROM usuario
 WHERE email = 'saulo@email.com' AND senha = 'saulo123'
 

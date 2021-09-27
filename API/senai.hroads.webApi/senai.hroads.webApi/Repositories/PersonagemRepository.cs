@@ -12,9 +12,10 @@ namespace senai.hroads.webApi_.Repositories
     public class PersonagemRepository : IPersonagemRepository
     {
         HroadsContext ctx = new HroadsContext();
-        public void AtualizarIdCorpo(int IdPersonagem, Personagem personagemAtualizado)
+        public void AtualizarIdUrl(int IdPersonagem, Personagem personagemAtualizado)
         {
-            Personagem personagemBuscado = BuscarPorId(IdPersonagem);
+            Personagem personagemBuscado = ctx.Personagems.FirstOrDefault(p => p.IdPersonagem == IdPersonagem);
+            //Estudio estudioBuscado = ctx.Estudios.Find(idEstudio);
 
             if (personagemAtualizado.NomePersonagem != null)
             {

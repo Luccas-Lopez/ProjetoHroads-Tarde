@@ -48,10 +48,10 @@ namespace senai.hroads.webApi_.Controllers
             return StatusCode(201);
         }
 
-        [HttpPut]
-        public IActionResult AtualizarIdCorpo(Habilidade habilidadeAtualizado)
+        [HttpPut("{idHabilidade}")]
+        public IActionResult AtualizarIdUrl(int idHabilidade, Habilidade habilidadeAtualizado)
         {
-            _habilidadeRepository.AtualizarIdCorpo(habilidadeAtualizado.IdHabilidade, habilidadeAtualizado);
+            _habilidadeRepository.AtualizarIdUrl(idHabilidade, habilidadeAtualizado);
 
             return StatusCode(204);
 

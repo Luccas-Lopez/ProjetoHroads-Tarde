@@ -13,7 +13,7 @@ namespace senai.hroads.webApi_.Interfaces
 
         public Usuario BuscarPorId(int IdUsuario);
 
-        void AtualizarIdCorpo(int IdUsuario, Usuario UsuarioAtualizado);
+        void AtualizarIdUrl(int IdUsuario, Usuario UsuarioAtualizado);
 
         void Deletar(int IdUsuario);
 
